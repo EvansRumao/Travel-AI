@@ -14,3 +14,5 @@ Activate the environment :
 
 conda activate travel 
 
+//postgress server setup using render cloud 
+
