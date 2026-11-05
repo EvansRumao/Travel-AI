@@ -42,6 +42,7 @@ def get_database_url():
     return database_url
 
 
+
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 if not GROQ_API_KEY:
     raise ValueError("GROQ_API_KEY is missing. Please add it to your .env file.")
@@ -52,8 +53,9 @@ if not GROQ_API_KEY:
 # =========================
 
 llm = ChatGroq(
-    model="llama-3.3-70b-versatile",
-    api_key=GROQ_API_KEY
+    model="openai/gpt-oss-20b",
+    api_key=GROQ_API_KEY,
+    temperature=0.3
 )
 
 
