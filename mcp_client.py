@@ -49,7 +49,8 @@ WEATHER_ENV["OPENWEATHER_API_KEY"] = (
 llm = ChatGroq(
     model="openai/gpt-oss-120b",
     api_key=GROQ_API_KEY,
-    temperature=0.5
+    max_tokens=1024,
+    temperature=0.3
 )
 
 
