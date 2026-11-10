@@ -23,7 +23,7 @@ from langchain_core.messages import (
     SystemMessage,
 )
 from langchain_groq import ChatGroq
-from langchain_google_genai import ChatGoogleGenerativeAI 
+
 
 from mcp_client import (
     tavily_mcp_search,
@@ -59,9 +59,8 @@ if not GROQ_API_KEY:
 # LLM - original model kept
 # =========================
 llm = ChatGroq(
-    model="openai/gpt-oss-120b",
-    api_key=os.getenv("GROQ_API_KEY"),
-    temperature=0.2,
+    model="llama-3.3-70b-versatile",
+    api_key=GROQ_API_KEY,
 )
 
 # =========================
